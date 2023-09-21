@@ -1,3 +1,3 @@
 export default function App() {
-  return <strong>KKKKKK</strong>;
+  return <main></main>;
 }
