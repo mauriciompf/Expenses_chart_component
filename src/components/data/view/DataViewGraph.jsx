@@ -1,4 +1,4 @@
-import data from "C:/mauricio/front-end_mentor_projects/expenses-chart-component-main/data.json";
+import data from "../../../../data.json";
 
 export default function DataViewGraph() {
   const list = [];
@@ -10,12 +10,21 @@ export default function DataViewGraph() {
 
   weekData.forEach((element) => {
     list.push(
-      <li key={element.id}>
-        <div>{element.amount}</div>
-        <span>{element.day}</span>
+      <li className="grid items-center gap-2" key={element.id}>
+        <div
+          className="bg-pri-soft-red w-8 rounded-sm"
+          style={{ height: element.amount * 3 }}
+        ></div>
+        <span className="text-center text-xs text-neu-medium-brown font-semibold">
+          {element.day}
+        </span>
       </li>
     );
   });
 
-  return <ul>{list}</ul>;
+  return (
+    <ul className="flex justify-between items-end pb-4 border-b-4 border-b-neu-cream">
+      {list}
+    </ul>
+  );
 }
