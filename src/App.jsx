@@ -3,7 +3,7 @@ import Data from "./components/data/Data";
 
 export default function App() {
   return (
-    <main>
+    <main className="mt-8 grid gap-4 w-[85%] mx-auto font-dm-sans">
       <Balance />
       <Data />
     </main>
