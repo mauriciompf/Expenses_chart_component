@@ -1,7 +1,6 @@
 # Frontend Mentor - Expenses chart component
 
 ![Design preview for the Expenses chart component coding challenge](./design/desktop-preview.jpg)
-Your challenge is to build out this bar chart component and get it looking as close to the design as possible.
 
 Users should be able to:
 
