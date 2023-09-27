@@ -2,7 +2,7 @@ import logo from "C:/mauricio/front-end_mentor_projects/expenses-chart-component
 
 export default function BalanceLogo() {
   return (
-    <div>
+    <div className="md:w-[15%]">
       <img src={logo} alt="Logo" />
     </div>
   );

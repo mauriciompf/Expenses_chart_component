@@ -16,19 +16,19 @@ export default function DataViewGraph() {
       index === currentDay ? "bg-pri-cyan" : "bg-pri-soft-red";
 
     return (
-      <li className="text-center relative" key={index}>
+      <li className="relative text-center" key={index}>
         <div
-          className={`cursor-pointer w-8 rounded-sm ${backgroundColorClass} hover:opacity-50 mb-2`}
+          className={`w-8 cursor-pointer rounded-sm ${backgroundColorClass} mb-2 hover:opacity-50`}
           style={{ height: percentage }}
           onMouseOver={() => setHoveredAmount(element.amount)}
           onMouseOut={() => setHoveredAmount(null)}
         ></div>
         {hoveredAmount === element.amount && (
-          <div className="text-xs bg-neu-park-brown text-white absolute w-auto p-1 rounded-md -left-[0.4rem] -top-7 font-bold">
+          <div className="absolute -left-[0.4rem] -top-7 w-auto rounded-md bg-neu-park-brown p-1 text-xs font-bold text-white md:-left-[0.8rem] md:-top-11 md:p-2 md:text-sm">
             ${hoveredAmount}
           </div>
         )}
-        <span className="block text-xs text-neu-medium-brown font-semibold">
+        <span className="block text-xs text-neu-medium-brown ">
           {element.day}
         </span>
       </li>
@@ -37,7 +37,7 @@ export default function DataViewGraph() {
 
   return (
     <div>
-      <ul className="flex justify-between h-full items-end pb-4 border-b-4 border-b-neu-cream">
+      <ul className="flex h-full items-end justify-between border-b-4 border-b-neu-cream pb-4">
         {list}
       </ul>
     </div>
